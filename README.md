@@ -43,15 +43,15 @@ The landing page is divided into several well-defined sections:
 ## Preview
 
 <p align="center">
-  <img src="Screenshots/Screenshot 2025-09-19 192227.png" alt="Hero Section" width="600">
+  <img src="screenshots/Screenshot 2025-09-19 192227.png" alt="Hero Section" width="600">
 </p>
 
 <p align="center">
-  <img src="Screenshots/Screenshot 2025-09-19 192249.png" alt="Menu Section" width="600">
+  <img src="screenshots/Screenshot 2025-09-19 192249.png" alt="Menu Section" width="600">
 </p>
 
 <p align="center">
-  <img src="Screenshots/Screenshot 2025-09-19 192325.png" alt="Gallery Section" width="600">
+  <img src="screenshots/Screenshot 2025-09-19 192325.png" alt="Gallery Section" width="600">
 </p>
 
 
