@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Bakery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFE4E1',
+                        secondary: '#8B4513'
+                    },
+                    borderRadius: {
+                        'none': '0px',
+                        'sm': '4px',
+                        DEFAULT: '8px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '20px',
+                        '2xl': '24px',
+                        '3xl': '32px',
+                        'full': '9999px',
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: #FFE4E1;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .scroll-nav {
+            background: rgba(62, 39, 35, 0.95);
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-[#1a1a1a] text-white">
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="#" class="text-4xl font-['Pacifico'] text-primary">logo</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link text-white hover:text-primary transition-colors">Home</a>
+                    <a href="#about" class="nav-link text-white hover:text-primary transition-colors">About</a>
+                    <a href="#menu" class="nav-link text-white hover:text-primary transition-colors">Menu</a>
+                    <a href="#gallery" class="nav-link text-white hover:text-primary transition-colors">Gallery</a>
+                    <a href="#contact" class="nav-link text-white hover:text-primary transition-colors">Contact</a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <i class="ri-menu-line ri-2x"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-[#1a1a1a] bg-opacity-95 backdrop-blur-sm">
+        <div class="flex flex-col items-center justify-center h-full space-y-8">
+            <a href="#home" class="text-2xl text-white hover:text-primary transition-colors">Home</a>
+            <a href="#about" class="text-2xl text-white hover:text-primary transition-colors">About</a>
+            <a href="#menu" class="text-2xl text-white hover:text-primary transition-colors">Menu</a>
+            <a href="#gallery" class="text-2xl text-white hover:text-primary transition-colors">Gallery</a>
+            <a href="#contact" class="text-2xl text-white hover:text-primary transition-colors">Contact</a>
+        </div>
+    </div>
+
+    <section id="home" class="relative h-screen">
+        <div class="absolute inset-0 parallax" style="background-image: url('https://public.readdy.ai/ai/img_res/8cd7edc549b62a1ed49636aeee4a2e34.jpg');"></div>
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div class="relative container mx-auto px-6 h-full flex items-center">
+            <div class="max-w-2xl">
+                <h1 class="text-6xl font-['Playfair_Display'] font-bold mb-6">Artisanal Baking at Its Finest</h1>
+                <p class="text-xl mb-8 text-gray-200">Experience the perfect blend of traditional craftsmanship and modern innovation in every bite. Our artisanal bakery brings you freshly baked goods made with love and expertise.</p>
+                <button class="bg-primary text-secondary px-8 py-3 text-lg font-semibold !rounded-button hover:bg-opacity-90 transition-colors cursor-pointer">Explore Our Menu</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-6">Our Story</h2>
+                    <p class="text-gray-300 mb-6">Since 1995, we've been crafting exceptional breads and pastries using time-honored techniques and the finest ingredients. Our passion for baking is reflected in every product we create.</p>
+                    <p class="text-gray-300 mb-8">What sets us apart is our commitment to quality and innovation. We combine traditional European baking methods with modern techniques to create unique flavors that delight our customers.</p>
+                    <div class="grid grid-cols-3 gap-8">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">30+</div>
+                            <div class="text-gray-400">Years Experience</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">50+</div>
+                            <div class="text-gray-400">Daily Products</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-primary mb-2">1000+</div>
+                            <div class="text-gray-400">Happy Customers</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://public.readdy.ai/ai/img_res/24770ad8bbdcdd12208ae602e38c25cd.jpg" alt="Baker at work" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-['Playfair_Display'] font-bold text-center mb-16">Our Signature Collection</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+                    <img src="https://public.readdy.ai/ai/img_res/c9e701af91d9b595451708b015ba269e.jpg" alt="Artisan Breads" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Artisan Breads</h3>
+                        <p class="text-gray-400 mb-4">Handcrafted sourdough, whole grain, and specialty breads baked fresh daily.</p>
+                        <button class="bg-primary text-secondary px-6 py-2 font-semibold !rounded-button hover:bg-opacity-90 transition-colors cursor-pointer">View Selection</button>
+                    </div>
+                </div>
+                <div class="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+                    <img src="https://public.readdy.ai/ai/img_res/3cda3a0e8ee14707782a9333b0e6796c.jpg" alt="French Pastries" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">French Pastries</h3>
+                        <p class="text-gray-400 mb-4">Delicate croissants, pain au chocolat, and other French classics.</p>
+                        <button class="bg-primary text-secondary px-6 py-2 font-semibold !rounded-button hover:bg-opacity-90 transition-colors cursor-pointer">View Selection</button>
+                    </div>
+                </div>
+                <div class="bg-[#2a2a2a] rounded-lg overflow-hidden shadow-xl transition-transform hover:-translate-y-2">
+                    <img src="https://public.readdy.ai/ai/img_res/a285ff3faaae5e6e3a6a789123a35e4e.jpg" alt="Cakes & Desserts" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Cakes & Desserts</h3>
+                        <p class="text-gray-400 mb-4">Exquisite cakes and desserts perfect for any celebration.</p>
+                        <button class="bg-primary text-secondary px-6 py-2 font-semibold !rounded-button hover:bg-opacity-90 transition-colors cursor-pointer">View Selection</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-['Playfair_Display'] font-bold text-center mb-16">Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/4de885b17995485c19e92db6f8359149.jpg" alt="Gallery 1" class="w-full h-64 object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="ri-zoom-in-line ri-2x text-white"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/947f258f0c33cb86f320fc2a72bbfeee.jpg" alt="Gallery 2" class="w-full h-64 object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="ri-zoom-in-line ri-2x text-white"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/8e1ad3eb8c10a89701a05dd6e2a1aa1f.jpg" alt="Gallery 3" class="w-full h-64 object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="ri-zoom-in-line ri-2x text-white"></i>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg">
+                    <img src="https://public.readdy.ai/ai/img_res/b2538e6ca45021f7fe86ad1ee6f66519.jpg" alt="Gallery 4" class="w-full h-64 object-cover transition-transform group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <i class="ri-zoom-in-line ri-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-[#1a1a1a]">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h2 class="text-4xl font-['Playfair_Display'] font-bold mb-8">Get in Touch</h2>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                                <i class="ri-map-pin-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Location</h3>
+                                <p class="text-gray-400">123 Baker Street, New York, NY 10001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                                <i class="ri-phone-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Phone</h3>
+                                <p class="text-gray-400">+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary bg-opacity-10 rounded-full">
+                                <i class="ri-mail-line text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold mb-1">Email</h3>
+                                <p class="text-gray-400">hello@artisanbakery.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-[#2a2a2a] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-[#2a2a2a] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 bg-[#2a2a2a] rounded-lg focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary text-secondary px-6 py-3 font-semibold !rounded-button hover:bg-opacity-90 transition-colors cursor-pointer">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#2a2a2a] py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-4 block">logo</a>
+                    <p class="text-gray-400">Crafting moments of joy through exceptional baking since 1995.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-primary transition-colors">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">About</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-primary transition-colors">Menu</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-primary transition-colors">Gallery</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Opening Hours</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>Monday - Friday: 7:00 AM - 8:00 PM</li>
+                        <li>Saturday: 8:00 AM - 9:00 PM</li>
+                        <li>Sunday: 8:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">Subscribe to our newsletter for updates and special offers.</p>
+                    <form id="newsletter-form" class="flex">
+                        <input type="email" placeholder="Your email" class="flex-1 px-4 py-2 bg-[#1a1a1a] rounded-l-lg focus:outline-none">
+                        <button type="submit" class="bg-primary text-secondary px-4 py-2 rounded-r-lg hover:bg-opacity-90 transition-colors">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400">&copy; 2025 Artisan Bakery. All rights reserved.</p>
+                    <div class="flex space-x-4 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="ri-instagram-fill"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="ri-twitter-fill"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors">
+                            <i class="ri-pinterest-fill"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbar = document.getElementById('navbar');
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const contactForm = document.getElementById('contact-form');
+            const newsletterForm = document.getElementById('newsletter-form');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scroll-nav');
+                } else {
+                    navbar.classList.remove('scroll-nav');
+                }
+            });
+
+            mobileMenuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    mobileMenu.classList.add('hidden');
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(contactForm);
+                const data = Object.fromEntries(formData);
+                console.log('Contact form submitted:', data);
+                contactForm.reset();
+                showNotification('Message sent successfully!');
+            });
+
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = newsletterForm.querySelector('input[type="email"]').value;
+                console.log('Newsletter subscription:', email);
+                newsletterForm.reset();
+                showNotification('Thank you for subscribing!');
+            });
+
+            function showNotification(message) {
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 right-4 bg-primary text-secondary px-6 py-3 rounded-lg shadow-lg transform translate-y-full opacity-0 transition-all duration-300';
+                notification.textContent = message;
+                document.body.appendChild(notification);
+
+                setTimeout(() => {
+                    notification.classList.remove('translate-y-full', 'opacity-0');
+                }, 100);
+
+                setTimeout(() => {
+                    notification.classList.add('translate-y-full', 'opacity-0');
+                    setTimeout(() => {
+                        notification.remove();
+                    }, 300);
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>
